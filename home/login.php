@@ -12,8 +12,8 @@
 include 'db_connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $admin = "admin@gmail.com"; // Admin email
+ 
+    $admin = "admin";
     $email = $_POST['email'];
     $password = $_POST['password'];
     
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user = $result->fetch_assoc();
       
         if (password_verify($password, $user['password'])) {
-            echo "<script>alert('Login successful!');</script>";
+            echo "Login successful!";
             
             // Check if user is admin based on their email
             if ($user['email'] == $admin) {
@@ -36,22 +36,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 session_start();
                 $_SESSION['user_id'] = $user['user_id']; // Store user_id for session
                 $_SESSION['email_address'] = $_POST['email'];
-                header('Location: user.php');
+                header('Location:user.php');
                 exit();
-            } else {
-                header('Location: login.php');
+            }else{
+                header('Location:login.php');
                 exit();
             }
         } else {
-            echo "<script>alert('Invalid password!');</script>";
+            echo "Invalid password!";
         }
     } else {
-        echo "<script>alert('No user found with that email!');</script>";
+        echo "No user found with that email!";
     }
     $conn->close();
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

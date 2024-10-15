@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 VALUES ('$first_name', '$last_name', '$user_name', '$user_id', '$email', '$mobile', '$dob', '$age', '$gender', '$hashed_password')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Registration successful!";
+            echo  "<script>alert('Register successful successful!');</script>";
             session_start();
             $_SESSION['user_id'] = $user_id;
             header('Location: index.php');
