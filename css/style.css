@@ -1,0 +1,189 @@
+/* Reset some default browser styling */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7E8EF1;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+}
+nav a.active
+{
+    background-color: #615EFC;
+    color: gold
+}
+
+nav a:hover {
+    border-color: orange;
+}
+
+.user-profile i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.loginimg
+{
+    width:40px;
+    border-radius:60%;
+}
+ .box div
+ {
+   scale:1;
+ } 
+ .box div :hover
+ {
+    scale:2.0;
+ }
+
+.hero {
+    background-color: lightgray;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carousel-items {
+    display: flex;
+}
+
+.carousel-item {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    margin: 0 10px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.info-box {
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.info-box h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top:30px;
+    background-color: #7E8EF1;
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+footer .social-media i {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* Container for the carousel */
+.carousel {
+    position: relative;
+    overflow: hidden; /* Hides overflow so only 3 boxes are visible */
+    width: 80%; /* Adjust as necessary */
+    margin: 0 auto; /* Center the carousel */
+}
+
+/* The container that holds all the boxes */
+.container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth scrolling */
+    width:1000px; /* 8 boxes, each 12.5% wide */
+}
+
+/* Each box */
+.box {
+    width:3000px; /* 8 boxes total, each takes 1/8th of the container */
+    height: 300px;
+    background-color: #D1D8C5; /* Green color */
+    margin-right: 10px;
+    box-sizing: border-box; /* Padding and borders included in width/height */
+}
+
+/* Navigation buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* More courses link */
+.more-courses {
+    display: block;
+    text-align: center;
+    margin-bottom:100px;
+    color: black;
+    text-decoration: none;
+}

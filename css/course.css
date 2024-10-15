@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+/* Main Content Styles */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures image fits within card */
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; /* Fixed width for cards */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: .1rem .1rem .8rem .5rem rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styles */
+.image img {
+  width: 100%; /* Full width of the card */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Caption Styles */
+.caption {
+  padding: 15px;
+}
+
+.caption .rate {
+  color: #FFD700; /* Gold color for stars */
+}
+
+.product_name {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.caption p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+.description {
+  font-weight: bold;
+  color: #555; /* Darker gray for description text */
+}

@@ -1,0 +1,60 @@
+body
+{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.head
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(7, 15, 101);
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.head div, .head button
+{
+    margin: 10px;
+}
+
+.head button
+{
+    background-color: rgba(22, 166, 206, 0.877);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cont
+{
+   margin-left: 300px;
+}
+
+.detail
+{
+    margin-left: 100px;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-right: 20px;
+    
+
+}
+.sub
+{
+    padding: 10px;
+    border: none;
+    color: #fff;
+    background-color:#51a3c4;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 300px;
+    margin-left: 20%;
+
+}

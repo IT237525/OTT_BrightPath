@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    background: linear-gradient(100deg, #0f009b, #91dce9);
+}
+
+.form {
+    background-color: #15172b;
+    border-radius: 20px;
+    padding: 30px;
+    width: 500px; /* Increased width */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    padding: 12px;
+    width: 100%;
+    color: #eee;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.2s ease-in-out;
+}
+
+.input:focus {
+    border-color: #08d;
+}
+
+.cut {
+    position: absolute;
+    height: 20px;
+    top: -20px;
+    left: 12px;
+    padding: 0 4px;
+    background-color: #15172b;
+    border-radius: 10px;
+}
+
+.placeholder {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 16px;
+    color: #65657b;
+    transition: 0.2s linear;
+    pointer-events: none;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) scale(0.75);
+    color: #eee;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.ic-half {
+    width: 48%;
+}
+
+.submit {
+    background-color: #08d;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.submit:active {
+    background-color: #06b;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #08d;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #06b;
+}
+
+.validation-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
