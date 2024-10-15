@@ -79,9 +79,9 @@
         <div>
             <h4>Contact Us</h4>
             <h4>Hotline Contact</h4>
-            <div>Email: xxxxxxxxx</div>
-            <div>Phone: xxxxxxxxxx</div>
-            <div>Address: xxxxxxxxxx</div>
+            <div>Email: brightpath@gmail.com</div>
+            <div>Phone: +94987654321</div>
+            <div>Address: Kantharmadam, Jaffna.</div>
         </div>
     </div>
 

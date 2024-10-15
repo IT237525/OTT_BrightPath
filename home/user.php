@@ -118,7 +118,7 @@
      </a>
 
       <!-- Course section -->
-      <section class="menu-section" id="course">
+      <section class="menu-section" id="course" style="color: #ece8e8;">
         <h2 class="section-title">Trending Course</h2>
         <div class="section-content">
           <ul class="menu-list">
@@ -126,8 +126,8 @@
              <a href="course.php" class="course">
               <img src="../img/python.png" alt="phyton" class="menu-image" />
               <div class="menu-details">
-                <h3 class="name">Python</h3>
-                <p class="text">Learn Python from scratch and master the language behind AI.</p>
+                <h3 class="name" style="color: #ece8e8; text-decoration: none;">Python</h3>
+                <p class="text" style="color: #ece8e8; text-decoration: none;">Learn Python from scratch and master the language behind AI.</p>
               </div>
              </a>
             </li>
@@ -135,8 +135,8 @@
               <a href="course.php" class="course">
               <img src="../img/code.png" alt="Bash" class="menu-image" />
               <div class="menu-details">
-                <h3 class="name">Bash</h3>
-                <p class="text">Gain control of your system with Bash scripting.</p>
+                <h3 class="name" style="color: #ece8e8; text-decoration: none;">Bash</h3>
+                <p class="text" style="color: #ece8e8; text-decoration: none;">Gain control of your system with Bash scripting.</p>
               </div>
             </a>
             </li>
@@ -144,8 +144,8 @@
               <a href="course.php" class="course">
               <img src="../img/3d.png" alt="Node.js" class="menu-image" />
               <div class="menu-details">
-                <h3 class="name">Node.js</h3>
-                <p class="text">Build lightning-fast, scalable applications with Node.js.</p>
+                <h3 class="name" style="color: #ece8e8; text-decoration: none;">Node.js</h3>
+                <p class="text" style="color: #ece8e8; text-decoration: none;">Build lightning-fast, scalable applications with Node.js.</p>
               </div>
             </a>
             </li>
@@ -153,8 +153,8 @@
               <a href="course.php" class="course">
               <img src="../img/php.png" alt="PHP" class="menu-image" />
               <div class="menu-details">
-                <h3 class="name">PHP</h3>
-                <p class="text">Dive into PHP and learn how to create dynamic, data-driven websites.</p>
+                <h3 class="name" style="color: #ece8e8; text-decoration: none;">PHP</h3>
+                <p class="text" style="color: #ece8e8; text-decoration: none;">Dive into PHP and learn how to create dynamic, data-driven websites.</p>
               </div>
             </a>
             </li>
@@ -162,8 +162,8 @@
               <a href="course.php" class="course">
               <img src="../img/typescript.png" alt="TypeScript" class="menu-image" />
               <div class="menu-details">
-                <h3 class="name">TypeScript</h3>
-                <p class="text">TypeScript takes JavaScript to the next level with type safety and powerful features.</p>
+                <h3 class="name" style="color: #ece8e8; text-decoration: none;">TypeScript</h3>
+                <p class="text" style="color: #ece8e8; text-decoration: none;">TypeScript takes JavaScript to the next level with type safety and powerful features.</p>
               </div>
             </a>
             </li>
@@ -171,8 +171,8 @@
             <a href="course.php" class="course">
               <img src="../img/mysql.png" alt="MySQL" class="menu-image" />
               <div class="menu-details">
-                <h3 class="name">MySQL</h3>
-                <p class="text">Understand the power of databases with MySQL.</p>
+                <h3 class="name" style="color: #ece8e8; text-decoration: none;">MySQL</h3>
+                <p class="text" style="color: #ece8e8; text-decoration: none;">Understand the power of databases with MySQL.</p>
               </div>
             </a>
             </li>
