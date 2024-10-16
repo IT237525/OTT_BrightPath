@@ -46,7 +46,7 @@
             include('header0.php');
         }
     ?>
-    <div style="height:100px; width:100vw;"></div>
+    <div style="height:100px;"></div>
 
     <div class="cont">
         <h1>Contact Us</h1>
@@ -71,11 +71,12 @@
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4"></textarea><br>
-
+                <div style="height:10px; width:100vw;"></div>
                 <button type="submit" class="sub">Submit</button>
             </form>
         </div>
 
+        <div style="height:50px;"></div>
         <div>
             <h4>Contact Us</h4>
             <h4>Hotline Contact</h4>
@@ -83,6 +84,7 @@
             <div>Phone: +94987654321</div>
             <div>Address: Kantharmadam, Jaffna.</div>
         </div>
+        <div style="height:50px;"></div>
     </div>
 
     <?php
