@@ -191,8 +191,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         document.addEventListener("DOMContentLoaded", function() {
             const editButton = document.getElementById("edit_button");
             const doneButton = document.getElementById("done_button");
-         
-            const passwordSection = document.getElementById("password_section");
             const successMessage = document.getElementById("success_message");
 
             const formFields = document.querySelectorAll('#first_name, #last_name, #user_name, #mobile');
