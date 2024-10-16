@@ -80,6 +80,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         const emailMessage = document.getElementById('emailMessage');
 
         emailInput.addEventListener('input', () => {
+            const emailValue = emailInput.value;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailValue.toLowerCase() === 'admin') {
+                emailInput.style.borderColor = '';
+                emailMessage.textContent = '';
+            } else if (!regex.test(emailValue)) {
+                emailInput.style.borderColor = 'red';
+                emailMessage.textContent = 'Invalid Email';
+            } else {
+                emailInput.style.borderColor = '';
+                emailMessage.textContent = '';
+            }
+    });
+    </script>
+<script>
+        const emailInput = document.getElementById('email');
+        const emailMessage = document.getElementById('emailMessage');
+
+        emailInput.addEventListener('input', () => {
         const emailValue = emailInput.value;
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!regex.test(emailValue)) {
