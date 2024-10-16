@@ -71,12 +71,11 @@
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4"></textarea><br>
-                <div style="height:10px; width:100vw;"></div>
+                <div style="height:10px;"></div>
                 <button type="submit" class="sub">Submit</button>
             </form>
         </div>
-
-        <div style="height:50px;"></div>
+        <div style="height:20px;"></div>
         <div>
             <h4>Contact Us</h4>
             <h4>Hotline Contact</h4>
@@ -84,7 +83,7 @@
             <div>Phone: +94987654321</div>
             <div>Address: Kantharmadam, Jaffna.</div>
         </div>
-        <div style="height:50px;"></div>
+        <div style="height:40px;"></div>
     </div>
 
     <?php
