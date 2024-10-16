@@ -2,17 +2,17 @@
   session_start();
   $user_id = "";
 
-  if (isset($_SESSION["user_id"]) || isset($_SESSION["admin"])) { // Already logged in
+  if (isset($_SESSION["user_id"]) || isset($_SESSION["admin"])) { 
     if (isset($_SESSION["user_id"])) {
-      $user_id = $_SESSION["user_id"]; // Use the session value
+      $user_id = $_SESSION["user_id"]; 
       if ($user_id != 'admin') {
         header("Location: user.php");
         exit();
       }
     }
      
-  } else { // Not logged in
-      header("Location: login.php"); // Redirect to the login page
+  } else { 
+      header("Location: login.php"); 
       exit();
   }
 ?>
@@ -30,21 +30,21 @@
 <body>
 
 <div class="admin-container">
-  <!-- Sidebar -->
+ 
   <aside class="sidebar">
     <div class="profile-section">
       <img src="../img/user-1.jpg" alt="Profile Picture" class="profile-pic">
       <div class="profile-info">
-        <h3>John Doe</h3>
-        <p>ID: 12345</p>
+        <h3>Osama bin Laden</h3>
+        <p>ID:admin123</p>
       </div>
     </div>
     <nav class="menu">
       <ul>
-        <li><a href="#" onclick="goToPage('dashboard')"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-        <li><a href="#" onclick="goToPage('user')"><i class="fas fa-users"></i> Users</a></li>
-        <li><a href="#" onclick="goToPage('course')"><i class="fas fa-graduation-cap"></i> Courses</a></li>
-        <li><a href="announcementadmin.php" onclick="goToPage('announcement')"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+        <li><a href="admin.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="manageuser.php"><i class="fas fa-users"></i> Users</a></li>
+        <li><a href="../Admin0/home.php"><i class="fas fa-graduation-cap"></i> Courses</a></li>
+        <li><a href="announcementadmin.php"><i class="fas fa-bullhorn"></i> Announcements</a></li>
         <li><a href="feedbackadmin.php" ><i class="fas fa-comment"></i> Feedback</a></li>
       </ul>
     </nav>
@@ -55,11 +55,11 @@
     </form>
   </aside>
 
-  <!-- Main Content -->
+ 
   <main class="main-content">
     <div class="grid-container">
       <a href="manageuser.php" style="text-decoration: none;">
-      <div class="card" onclick="goToManagePage('user')">
+      <div class="card">
         <div class="card-icon"><i class="fas fa-users"></i></div>
         <div class="card-content">
           <h3>Users</h3>
@@ -68,7 +68,7 @@
       </div>
       </a>
       <a href="../Admin0/home.php"style="text-decoration: none;">
-      <div class="card" onclick="goToManagePage('course')">
+      <div class="card" >
         <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
         <div class="card-content">
           <h3>Courses</h3>
@@ -98,6 +98,6 @@
   </main>
 </div>
 
-<!-- <script src="../js/admin.js"></script> -->
+
 </body>
 </html>

@@ -78,7 +78,7 @@
     </header>
 
     <main>
-      <!-- Hero section -->
+   
       <section class="hero-section">
         <div class="section-content">
           <div class="hero-details">
@@ -97,7 +97,7 @@
         </div>
       </section>
 
-      <!-- About section -->
+      
      <a href="aboutus.php" class="about">
       <section class="about-section" id="about">
         <div class="section-content">
@@ -117,7 +117,7 @@
       </section>
      </a>
 
-      <!-- Course section -->
+      
       <section class="menu-section" id="course" style="color: #ece8e8;">
         <h2 class="section-title">Trending Course</h2>
         <div class="section-content">
@@ -180,7 +180,7 @@
         </div>
       </section>
 
-      <!-- Testimonials section -->
+      
       <section class="testimonials-section" id="testimonials">
         <h2 class="section-title">Testimonials</h2>
         <div class="section-content">
@@ -226,7 +226,7 @@
         </div>
       </section>
 
-      <!-- Gallery section -->
+      
       <section class="gallery-section" id="gallery">
         <h2 class="section-title">Gallery</h2>
         <div class="section-content">
@@ -253,7 +253,7 @@
         </div>
       </section>
 
-      <!-- Contact section -->
+      
       <section class="contact-section" id="contact">
         <h2 class="section-title">Contact Us</h2>
         <div class="section-content">
@@ -276,7 +276,7 @@
             </li>
           </ul>
 
-          <!-- Contact Form -->
+          
           <form method="POST" action="contactUs.php" class="contact-form" id="form" //onsubmit="return validateForm();">
               <input type="hidden" name="first_name" value="<?php echo $user['first_name']; ?>">
               <input type="hidden" name="last_name" value="<?php echo $user['last_name']; ?>">
@@ -288,7 +288,7 @@
         </div>
       </section>
 
-      <!-- Footer section -->
+      
       <footer class="footer-section">
         <div class="section-content">
           <p class="copyright-text">© 2024 Bright Path</p>
@@ -306,10 +306,10 @@
       </footer>
     </main>
 
-    <!-- Linking Swiper script -->
+  
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Linking custom script -->
+    
     <script src="../js/index.js"></script>
 
     <script>

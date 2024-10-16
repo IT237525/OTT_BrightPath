@@ -43,10 +43,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 exit();
             }
         } else {
-            echo "Invalid password!";
+            echo "<script>alert('Invalid Password!');</script>";
         }
     } else {
-        echo "No user found with that email!";
+        echo "<script>alert('No user fund in this email!');</script>";
     }
     $conn->close();
 }
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="../css/login.css"> <!-- Login-specific CSS -->
+    <link rel="stylesheet" href="../css/login.css"> 
 </head>
 <body>
 
@@ -66,16 +66,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <div class="title">Welcome</div>
       <div class="subtitle">Let's log in to your account!</div>
 
-      <!-- Login Form -->
       <form action="login.php" method="POST">
-          <!-- Email Input -->
-          <div class="input-container ic2">
-              <input id="email" name="email" class="input" type="text" placeholder="Email" required />
-              <div class="cut"></div>
-              <label for="email" class="placeholder">Email</label>
-          </div>
-              
-          <!-- Password Input -->
+          
+      <div class="input-container ic2">
+        <input id="email" name="email" class="input" type="text" placeholder="Email" required />
+        <div class="cut"></div>
+        <label for="email" class="placeholder">Email</label>
+        <small id="emailMessage" style="color: red;"></small> 
+      </div>
+
+      <script>
+        const emailInput = document.getElementById('email');
+        const emailMessage = document.getElementById('emailMessage');
+
+        emailInput.addEventListener('input', () => {
+        const emailValue = emailInput.value;
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!regex.test(emailValue)) {
+        emailInput.style.borderColor = 'red';
+        emailMessage.textContent = 'Invalid Email';
+        } else {
+        emailInput.style.borderColor = '';
+        emailMessage.textContent = '';
+        }
+        });
+      </script>
+        
 
           <div class="input-container ic2">
               <input id="password" name="password" class="input" type="password" placeholder="Password" required />
@@ -83,12 +99,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <label for="password" class="placeholder">Password</label>
           </div>
 
-          <!-- Submit Button -->
+        
 
           <button type="submit" class="submit">Log In</button>
       </form>
 
-      <!-- Links for Register and Forgot Password -->
+   
        
       <div class="links">
           <a href="register.php">Don't have an account? Register here.</a>

@@ -1,4 +1,4 @@
-/* General page styling */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f7fa;
@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Header styling */
+
 h2 {
     text-align: center;
     color: #4a90e2;
@@ -15,7 +15,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* Table container styling */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -26,14 +26,14 @@ table {
     overflow: hidden;
 }
 
-/* Table headers */
+
 table th, table td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-/* Table header styling */
+
 table th {
     background-color: #4a90e2;
     color: white;
@@ -41,12 +41,12 @@ table th {
     text-transform: uppercase;
 }
 
-/* Table rows */
+
 table td {
     background-color: white;
 }
 
-/* Input fields inside table */
+
 table td input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -58,14 +58,14 @@ table td input[type="text"] {
     transition: background-color 0.3s ease;
 }
 
-/* Make input fields more interactive when editable */
+
 table td input[type="text"]:focus {
     background-color: #e0f7fa;
     border-color: #4a90e2;
     outline: none;
 }
 
-/* General button styling */
+
 button {
     padding: 10px 20px;
     font-size: 1rem;
@@ -76,7 +76,7 @@ button {
     font-weight: bold;
 }
 
-/* Edit button styling */
+
 button.edit-btn {
     background: linear-gradient(135deg, #4a90e2, #50b6ff);
     color: white;
@@ -87,7 +87,7 @@ button.edit-btn:hover {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Done button styling */
+
 button.done-btn {
     background: linear-gradient(135deg, #28a745, #4ec962);
     color: white;
@@ -99,7 +99,7 @@ button.done-btn:hover {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Delete button styling */
+
 button[name="delete"] {
     background: linear-gradient(135deg, #ff4e4e, #ff7171);
     color: white;
@@ -110,13 +110,13 @@ button[name="delete"]:hover {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Table row hover effect */
+
 table tbody tr:hover {
     background-color: #f9f9f9;
     transition: background-color 0.2s ease;
 }
 
-/* Make the table more compact on smaller devices */
+
 @media (max-width: 768px) {
     table {
         font-size: 0.9rem;

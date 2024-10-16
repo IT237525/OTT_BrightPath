@@ -1,84 +1,49 @@
-/* Sidebar Container */
 .sidebar {
     position: fixed;
     top: 0;
-    right: -350px; /* Initially hidden off the right side */
-    width: 350px; /* Slightly wider for more content space */
-    height: 100%;
-    background: #fff; /* Clean white background */
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    right: -350px; 
+    width: 350px;
+    height: 100vh; 
+    background: #fff; 
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    overflow-y: auto;
-    transition: right 0.3s ease; /* Smooth slide in/out effect */
-    font-family: 'Arial', sans-serif; /* Simple, clean font */
+    transition: right 0.3s ease; 
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; 
 }
 
-/* Sidebar Header */
 .sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f8f9fa; /* Soft light grey */
+    background-color: #f8f9fa; 
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
-.sidebar-header h2 {
-    font-size: 1.5rem;
-    margin: 0;
-    color: #333;
-}
-
-/* Close Button */
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #999;
-    transition: color 0.3s ease;
-}
-
-.close-btn:hover {
-    color: #333; /* Darker color on hover */
-}
-
-/* Announcement List */
 .announcement-list {
     padding: 20px;
+    max-height: calc(100vh - 60px); 
+    overflow-y: auto; 
 }
 
-/* Individual Announcement Item */
 .announcement-item {
     background-color: #f1f1f1;
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .announcement-item:hover {
-    transform: translateY(-5px); /* Lifts the item slightly on hover */
-    background-color: #e9ecef; /* Light background change on hover */
+    transform: translateY(-5px); 
+    background-color: #e9ecef; 
 }
 
-.announcement-date {
-    font-weight: bold;
-    color: #495057;
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-}
-
-.announcement-text {
-    color: #212529;
-    line-height: 1.6;
-}
-
-/* If No Announcements */
 .no-announcements {
     padding: 20px;
     text-align: center;
@@ -86,29 +51,13 @@
     color: #999;
 }
 
-/* Overlay for background when sidebar is open */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 900;
-    display: none; /* Hidden by default */
-}
-
-/* Show the sidebar when active */
-body.sidebar-open .sidebar {
-    right: 0; /* Slide the sidebar into view */
-}
-
-body.sidebar-open .overlay {
-    display: block; /* Show overlay */
-}
-
-/* Blur effect for main content */
-body.blur #main-content {
-    filter: blur(5px);
-    transition: filter 0.3s ease;
+    display: none;
 }

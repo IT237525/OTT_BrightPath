@@ -1,4 +1,4 @@
-/* General Admin Styles */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7fc;
@@ -21,7 +21,7 @@ h1 {
     font-weight: 700;
 }
 
-/* Form Styles */
+
 #announcementForm {
     display: flex;
     flex-direction: column;
@@ -66,7 +66,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Table Styles for Admin */
+
 #announcementTable {
     width: 100%;
     border-collapse: collapse;
@@ -100,7 +100,7 @@ button:hover {
     background-color: #f1f9ff;
 }
 
-/* Buttons inside table */
+
 .edit-btn, .delete-btn {
     padding: 8px 12px;
     font-size: 1rem;
@@ -129,7 +129,7 @@ button:hover {
     background-color: #c82333;
 }
 
-/* Responsive Layout for Admin Page */
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;

@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_announcement'])) {
     
     if ($conn->query($sql) === TRUE) {
         echo "<script>alert(' ". "Announcement added successfully" . " ')</script>";
-        // header("Location: announcementadmin.php");
+     
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -26,7 +26,7 @@ if (isset($_POST['edit_announcement'])) {
     
     if ($conn->query($sql) === TRUE) {
         echo "<script>alert(' ". "Announcement updated successfully" . " ')</script>";
-        // header("Location: announcementadmin.php");
+       
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -40,8 +40,7 @@ if (isset($_POST['delete_announcement'])) {
     
     if ($conn->query($sql) === TRUE) {
         echo "<script>alert(' ". "Announcement deleted successfully" . " ')</script>";
-        // header("Location: announcementadmin.php");
-    } else {
+        
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
@@ -63,10 +62,25 @@ if (isset($_POST['delete_announcement'])) {
         <h1>Manage Announcements</h1>
 
         
-        <form id="announcementForm" method="POST" action="">
-            <textarea id="announcementText" name="announcementText" placeholder="Enter your announcement here..." required></textarea>
-            <button type="submit" name="add_announcement">Add Announcement</button>
-        </form>
+    <form id="announcementForm" method="POST" action="">
+    <textarea id="announcementText" name="announcementText" placeholder="Enter your announcement here..." required></textarea>
+    <span id="errorMessage" style="color:red; display:none;">Announcement should not exceed 25 words.</span><br>
+    <button type="submit" name="add_announcement">Add Announcement</button>
+    </form>
+
+    <script>
+    document.getElementById("announcementForm").addEventListener("submit", function(event) {
+        const announcementText = document.getElementById("announcementText").value;
+        const wordCount = announcementText.trim().split(/\s+/).length;
+
+        if (wordCount > 25) {
+            event.preventDefault(); 
+            document.getElementById("errorMessage").style.display = "inline"; //  error message
+        } else {
+            document.getElementById("errorMessage").style.display = "none"; 
+        }
+    });
+    </script>
 
        
         <table id="announcementTable">

@@ -38,27 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $last_name = $_POST['last_name'];
         $user_name = $_POST['user_name'];
         $mobile = $_POST['mobile'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $new_password = $_POST['new_password'];
-
-        // Handle email or password change
-        if ($email !== $user['email'] || !empty($new_password)) {
-            if (password_verify($password, $user['password'])) {
-                $hashed_password = !empty($new_password) ? password_hash($new_password, PASSWORD_BCRYPT) : $user['password'];
-                $update_sql = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', user_name = '$user_name', mobile = '$mobile', email = '$email', password = '$hashed_password' WHERE user_id = '$user_id'";
-                $success_message = "Profile updated successfully!";
-            } else {
-                echo "Incorrect password!";
-                exit();
-            }
-        } else {
-            // Update without changing email or password
-            $update_sql = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', user_name = '$user_name', mobile = '$mobile' WHERE user_id = '$user_id'";
-            $success_message = "Profile updated successfully!";
-        }
-
-        // Execute the update query
+        $update_sql = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', user_name = '$user_name', mobile = '$mobile' WHERE user_id = '$user_id'";
+        $success_message = "Profile updated successfully!";
+    
         $conn->query($update_sql);
     }
 }
@@ -72,8 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+  
     <style>
  
 
@@ -195,19 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="mobile">Mobile Number:</label>
             <input type="text" id="mobile" name="mobile" value="<?php echo $user['mobile']; ?>" disabled required><br>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<?php echo $user['email']; ?>" disabled required><br>
-            
-            <div id="password_section" style="display: none;">
-                <label for="password">Current Password (required for email or password change):</label>
-                <input type="password" id="password" name="password"><br>
-                
-                <label for="new_password">New Password (optional):</label>
-                <input type="password" id="new_password" name="new_password"><br>
-                
-                <label for="confirm_password">Confirm New Password:</label>
-                <input type="password" id="confirm_password"><br>
-            </div>
+           
             
             <button type="button" id="edit_button">Edit</button>
             <button type="submit" id="done_button" name="update_profile" disabled style="display:none;">Done</button>
@@ -222,11 +191,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         document.addEventListener("DOMContentLoaded", function() {
             const editButton = document.getElementById("edit_button");
             const doneButton = document.getElementById("done_button");
-            const emailField = document.getElementById("email");
+         
             const passwordSection = document.getElementById("password_section");
             const successMessage = document.getElementById("success_message");
 
-            const formFields = document.querySelectorAll('#first_name, #last_name, #user_name, #mobile, #email');
+            const formFields = document.querySelectorAll('#first_name, #last_name, #user_name, #mobile');
 
             // Enable editing when Edit button is clicked
             editButton.addEventListener('click', () => {
@@ -235,14 +204,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 editButton.style.display = "none";
                 doneButton.style.display = "inline-block";
 
-                // If email is changed, show password section
-                emailField.addEventListener('input', () => {
-                    if (emailField.value !== emailField.defaultValue) {
-                        passwordSection.style.display = 'block';
-                    } else {
-                        passwordSection.style.display = 'none';
-                    }
-                });
+              
             });
 
             // Automatically hide success message after a few seconds

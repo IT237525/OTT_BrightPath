@@ -1,13 +1,13 @@
-<!-- announcement_sidebar.php -->
+
 <?php
 include 'db_connect.php';
-// Fetch all announcements
+
 $result = $conn->query("SELECT announcement_text, announcement_date FROM announcements ORDER BY announcement_date DESC");
 $conn->close();
 ?>
 
 <head>
-    <link rel="stylesheet" href="../css/announcement.css"> <!-- External CSS -->
+    <link rel="stylesheet" href="../css/announcement.css">
 </head>
 
 <div class="sidebar" id="announcement-sidebar">
@@ -32,7 +32,7 @@ $conn->close();
 </div>
 
 
-<!-- Overlay for when sidebar is open -->
+
 <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
 <script>

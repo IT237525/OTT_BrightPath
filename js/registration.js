@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dobValue = new Date(dobInput.value);
         const today = new Date();
 
-        // Calculate the minimum date (8 years ago from today)
+        // Calculate the minimum date (16 years ago from today)
         const minDate = new Date();
         minDate.setFullYear(today.getFullYear() - 16);
 
@@ -61,6 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
             dobMessage.style.color = 'red';
            
         } 
+        else {
+            dobMessage.textContent = "";
+            dobMessage.style.color = '';
+        }
         
     });
 
@@ -104,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Enable submit button if terms are accepted
-    termsCheckbox.addEventListener('change', () => {
+    termsCheckbox.addEventListener('change', () =>{
+
         submitButton.disabled = !termsCheckbox.checked;
     });
 });

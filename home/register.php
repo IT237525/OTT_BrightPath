@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo  "<script>alert('Register successful successful!');</script>";
             session_start();
             $_SESSION['user_id'] = $user_id;
-            header('Location: index.php');
+            header('Location:user.php');
         } else {
             header('Location:login.php');
         }
@@ -49,7 +49,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
-    <link rel="stylesheet" href="../css/register.css"> <!-- Registration-specific CSS -->
+    <link rel="stylesheet" href="../css/register.css"> 
 </head>
 <body>
 
@@ -57,9 +57,9 @@ $conn->close();
       <div class="title">Welcome</div>
       <div class="subtitle">Let's create your account!</div>
 
-      <!-- Registration Form -->
+    
       <form action="register.php" method="POST">
-          <!-- First Name and Last Name on the same line -->
+         
           <div class="name-container">
               <div class="input-container ic-half">
                   <input id="first-name" name="first_name" class="input" type="text" placeholder=" " required />
@@ -73,7 +73,7 @@ $conn->close();
               </div>
           </div>
 
-          <!-- User ID Input -->
+        
           <div class="input-container ic2">
               <input id="user-name" name="user_name" class="input" type="text" placeholder=" " required />
               <div class="cut"></div>
@@ -81,7 +81,7 @@ $conn->close();
               <div class="validation-message" id="user-name-message"></div>
           </div>
 
-          <!-- Email Input -->
+         
           <div class="input-container ic2">
               <input id="email" name="email" class="input" type="email" placeholder=" " required />
               <div class="cut"></div>
@@ -89,7 +89,7 @@ $conn->close();
               <div class="validation-message" id="email-message"></div>
           </div>
 
-          <!-- Mobile Number Input -->
+       
           <div class="input-container ic2">
               <input id="mobile" name="mobile" class="input" type="text" placeholder=" " required />
               <div class="cut"></div>
@@ -97,7 +97,7 @@ $conn->close();
               <div class="validation-message" id="mobile-message"></div>
           </div>
 
-          <!-- Date of Birth Input -->
+          
           <div class="input-container ic2">
               <input id="dob" name="dob" class="input" type="date" placeholder=" " required />
               <div class="cut"></div>
@@ -105,7 +105,7 @@ $conn->close();
               <div class="validation-message" id="dob-message"></div>
           </div>
 
-          <!-- Gender Selection -->
+        
           <div class="input-container ic2">
               <select id="gender" name="gender" class="input" required>
                   <option value="" disabled selected>Select Gender</option>
@@ -117,7 +117,7 @@ $conn->close();
               <label for="gender" class="placeholder">Gender</label>
           </div>
 
-          <!-- Password Input -->
+       
           <div class="input-container ic2">
               <input id="password" name="password" class="input" type="password" placeholder=" " required />
               <div class="cut"></div>
@@ -125,7 +125,7 @@ $conn->close();
               <div class="validation-message" id="password-message"></div>
           </div>
 
-          <!-- Confirm Password Input -->
+         
           <div class="input-container ic2">
               <input id="confirm-password" name="confirm_password" class="input" type="password" placeholder=" " required />
               <div class="cut"></div>
@@ -133,22 +133,22 @@ $conn->close();
               <div class="validation-message" id="confirm-password-message"></div>
           </div>
 
-          <!-- Terms and Conditions Checkbox -->
+         
           <div class="input-container ic2">
               <input type="checkbox" id="terms" name="terms" required />
               <label for="terms">I accept the <a href="tearmsandC.php">Terms and Conditions</a></label>
           </div>
 
-          <!-- Submit Button -->
+       
           <button type="submit" class="submit">Register</button>
       </form>
 
-      <!-- Link to Log In Page -->
+      
       <div class="links">
           Already have an account? <a href="login.php">Log in here</a>
       </div>
   </div>
 
-  <script src="../js/registration.js"></script> <!-- Registration-specific JavaScript -->
+  <script src="../js/registration.js"></script> 
 </body>
 </html>
