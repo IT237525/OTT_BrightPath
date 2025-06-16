@@ -8,6 +8,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
+//current
 $user_id = $_SESSION['user_id'];
 
 // Insert feedback
