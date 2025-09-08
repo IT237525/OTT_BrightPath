@@ -164,7 +164,8 @@ CREATE TABLE `user_questions` (
 INSERT INTO `user_questions` (`id`, `question`, `created_at`) VALUES
 (8, 'How enroll Course\r\n', '2024-10-07 15:17:59'),
 (9, 'How To Login without email', '2024-10-07 15:18:18'),
-(10, 'Trainer moblie number', '2024-10-07 15:18:38');
+(10, 'Trainer moblie number', '2024-10-07 15:18:38')
+ (11,'The login have some error how it fix','2025-09-08') ;
 
 --
 -- Indexes for dumped tables
